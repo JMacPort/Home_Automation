@@ -20,7 +20,6 @@ typedef enum {
     I2C_ERROR_BUS
 } I2C_Status_t;
 
-
 void I2C_Init(void);
 I2C_Status_t I2C_CheckBusy(void);
 I2C_Status_t I2C_Start(void);
@@ -29,6 +28,5 @@ I2C_Status_t I2C_SendData(uint8_t data);
 void I2C_Stop();
 I2C_Status_t I2C_Write(uint8_t address, uint8_t data);
 I2C_Status_t I2C_RecoverBus(void);
-
 
 #endif /* PERIPHERALS_INCLUDE_I2C_H_ */
