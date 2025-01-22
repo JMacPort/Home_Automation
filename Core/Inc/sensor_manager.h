@@ -1,0 +1,6 @@
+#ifndef INC_SENSOR_MANAGER_H_
+#define INC_SENSOR_MANAGER_H_
+
+
+
+#endif /* INC_SENSOR_MANAGER_H_ */

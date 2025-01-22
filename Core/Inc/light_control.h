@@ -1,0 +1,6 @@
+#ifndef INC_LIGHT_CONTROL_C_
+#define INC_LIGHT_CONTROL_C_
+
+
+
+#endif /* INC_LIGHT_CONTROL_C_ */
