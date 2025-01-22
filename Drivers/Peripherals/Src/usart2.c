@@ -15,7 +15,6 @@ void USART_Init(void) {
 
 void USART2_Print(const char* str, ...) {
     char buffer[100];
-    uint16_t timeout = USART2_TIMEOUT;
 
     va_list args;
     va_start(args, str);
@@ -24,6 +23,7 @@ void USART2_Print(const char* str, ...) {
 
     char* ptr = buffer;
     while(*ptr) {
+        uint16_t timeout = USART2_TIMEOUT;
         while(!(USART2->SR & (1 << 7))) {
         	if (--timeout == 0) break;
         }
