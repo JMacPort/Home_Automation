@@ -2,7 +2,7 @@
 #include "led.h"
 
 void LED_Init() {
-	RCC -> APB1ENR |= (1 << GPIO_PORT_A);
+	RCC -> AHB1ENR |= (1 << GPIO_PORT_A);
 
 	GPIOA -> MODER &= ~(LED_MODE << LED_PIN);
 	GPIOA -> MODER |= (LED_MODE << LED_PIN);

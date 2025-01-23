@@ -1,7 +1,15 @@
 #ifndef PERIPHERALS_INCLUDE_I2C_H_
 #define PERIPHERALS_INCLUDE_I2C_H_
 
+#include "main.h"
+#include <stdint.h>
+
 #define I2C_TIMEOUT 100
+
+#define GPIO_PORT_B 1
+#define I2C_MODE	2
+#define I2C_SCL		8
+#define I2C_SDA		9
 
 #define I2C_CLOCK 	21
 #define I2C_SWRST   15

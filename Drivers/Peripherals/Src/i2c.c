@@ -1,8 +1,15 @@
-#include "main.h"
 #include "i2c.h"
 
-
 void I2C_Init() {
+	RCC -> AHB1ENR |= (1 << GPIO_PORT_B);
+	GPIOB -> MODER &= ~((3 << (2 * I2C_SCL)) | (3 << (2 * I2C_SDA)));
+	GPIOB -> MODER |= (I2C_MODE << (2 * I2C_SCL)) | (I2C_MODE << (2 * I2C_SDA));
+	GPIOB -> OTYPER |= (1 << I2C_SCL) | (1 << I2C_SDA);
+	GPIOB -> PUPDR &= ~((3 << (2 * I2C_SCL)) | (3 << (2 * I2C_SDA)));
+	GPIOB -> PUPDR |= (3 << (2 * I2C_SCL)) | (3 << (2 * I2C_SDA));
+	GPIOB -> AFR[1] &= ~(0xF << 0) | (0xF << 4); 					// Not modularized because of structure
+	GPIOB -> AFR[1] |= (4 << 0) | (4 << 4);
+
 	RCC -> APB1ENR |= (1 << I2C_CLOCK);
 	I2C1 -> CR1 |= (1 << I2C_SWRST);
 	I2C1 -> CR1 &= ~(1 << I2C_SWRST);

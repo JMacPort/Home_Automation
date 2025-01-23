@@ -1,6 +1,6 @@
 #ifndef PERIPERALS_LIGHT_SENSOR_H_
 #define PERIPERALS_LIGHT_SENSOR_H_
 
-
+#include "i2c.h"
 
 #endif /* PERIPERALS_LIGHT_SENSOR_H_ */

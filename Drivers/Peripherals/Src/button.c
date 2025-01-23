@@ -2,7 +2,7 @@
 #include "button.h"
 
 void Button_Init() {
-	RCC -> APB1ENR |= (1 << GPIO_PORT_A);
+	RCC -> AHB1ENR |= (1 << GPIO_PORT_A);
 
 	GPIOA -> MODER &= ~(3 << (2 * BUTTON_PIN));
 

@@ -5,7 +5,7 @@
 #define LED_PIN		8
 #define LED_MODE	1		// Output
 
-void Led_Init(void);
+void LED_Init(void);
 
 // Function pointer to create an LED interface if multiple LEDs were to be used
 typedef void (*ledFunc) (void);
