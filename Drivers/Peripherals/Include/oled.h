@@ -21,11 +21,17 @@
 #define COM_SCAN_D  0xC8
 #define NORM_DISP   0xA6
 
-void OLED_Send_Command(uint8_t cmd);
-void OLED_ClearScreen();
-void OLED_Init();
-void OLED_SetCursor(uint8_t, uint8_t);
-void OLED_WriteChar(char);
-void OLED_WriteString(const char*);
+typedef enum {
+	OLED_ERROR_PARAM,
+	OLED_ERROR_I2C,
+	OLED_OK
+} OLED_Status_t;
+
+OLED_Status_t OLED_Send_Command(uint8_t cmd);
+OLED_Status_t OLED_ClearScreen();
+OLED_Status_t OLED_Init();
+OLED_Status_t OLED_SetCursor(uint8_t, uint8_t);
+OLED_Status_t OLED_WriteChar(char);
+OLED_Status_t OLED_WriteString(const char*);
 
 #endif /* PERIPERALS_LCD_H_ */
