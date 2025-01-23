@@ -10,6 +10,6 @@ void LED_Init() {
 
 void LED_ON() {GPIOA -> ODR |= (1 << LED_PIN);}
 
-void LED_OFF() {GPIOA -> ODR &= ~(0 << LED_PIN);}
+void LED_OFF() {GPIOA -> ODR &= ~(1 << LED_PIN);}
 
 led MyLED = {LED_ON, LED_OFF};
