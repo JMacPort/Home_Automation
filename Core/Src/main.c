@@ -3,6 +3,7 @@
 #include "button.h"
 #include "i2c.h"
 #include "led.h"
+#include "oled.h"
 
 void System_Init();
 
@@ -20,5 +21,6 @@ void System_Init() {
 	USART_Init();
 	Button_Init();
 	I2C_Init();
+	OLED_Init();
 	LED_Init();
 }
